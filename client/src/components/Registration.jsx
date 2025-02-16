@@ -51,7 +51,7 @@ const Registration = () => {
       if (!formData.graduationYear) newErrors.graduationYear = 'Graduation year is required';
     } else if (step === 3) {
       if (!formData.knownSkills) newErrors.knownSkills = 'Technical skills are required';
-      if (!formData.resume) newErrors.resume = 'Resume is required';
+      // if (!formData.resume) newErrors.resume = 'Resume is required';
     }
     return newErrors;
   };

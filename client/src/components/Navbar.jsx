@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -7,10 +8,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-cyan-100 hover:text-white transition-all duration-300 flex items-center">
+            <Link to="/" className="text-2xl font-bold text-cyan-100 hover:text-white transition-all duration-300 flex items-center">
               <span className="mr-2 animate-pulse">✦</span>
               Tech Vritti
-            </h1>
+            </Link>
           </div>
 
           {/* Navigation Links */}

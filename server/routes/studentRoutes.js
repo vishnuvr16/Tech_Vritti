@@ -20,7 +20,7 @@ router.post("/register", upload.single("resume"), async (req, res) => {
             projectDetails,
             knownSkills,
             knownSoftware,
-            resume: req.file.path,
+            resume: req.file ? req.file.path : null, 
             experience,
             softSkills
         });

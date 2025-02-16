@@ -22,7 +22,7 @@ router.post("/add-questions", async (req, res) => {
 // Get 10 random quiz questions
 router.get("/questions", async (req, res) => {
     try {
-        const questions = await QuizQuestion.aggregate([{ $sample: { size: 10 } }]);
+        const questions = await QuizQuestion.find();
         res.json(questions);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -48,7 +48,7 @@ router.post("/submit-quiz", async (req, res) => {
 
         let score = 0;
         const results = questions.map(q => {
-            const questionId = q._id.toString(); // Ensure ID is a string
+            const questionId = q._id.toString(); 
             const userAnswer = answers[questionId];
 
             console.log(`Q: ${q.question} | Correct: ${q.answer} | User: ${userAnswer}`);
