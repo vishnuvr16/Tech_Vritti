@@ -104,32 +104,37 @@ const AdminDashboard = () => {
         ) : (
           <div className="bg-white shadow-md rounded-lg">
             <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-gray-100">
-                  <th className="p-3 border">ID</th>
-                  <th className="p-3 border">Name</th>
-                  <th className="p-3 border">Email</th>
-                  <th className="p-3 border">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {students.map((student) => (
-                  <tr key={student._id} className="border-t">
-                    <td className="p-3 border">{student._id.slice(-5)}</td>
-                    <td className="p-3 border">{student.fullName}</td>
-                    <td className="p-3 border">{student.email}</td>
-                    <td className="p-3 border">
-                      <button
-                        onClick={() => setSelectedStudent(student)}
-                        className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
-                      >
-                        View Results
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+  <thead>
+    <tr className="bg-gray-100">
+      <th className="p-3 border text-center">ID</th>
+      <th className="p-3 border text-center">Name</th>
+      <th className="p-3 border text-center">Email</th>
+      <th className="p-3 border text-center">Resume</th>
+      <th className="p-3 border text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {students.map((student) => (
+      <tr key={student._id} className="border-t">
+        <td className="p-3 border text-center">{student._id.slice(-5)}</td>
+        <td className="p-3 border text-center">{student.fullName}</td>
+        <td className="p-3 border text-center">{student.email}</td>
+        <td className="p-3 border text-center">
+          <a href={student.resume} target="_blank" className="text-blue-600 hover:underline">Link</a>
+        </td>
+        <td className="p-3 border text-center">
+          <button
+            onClick={() => setSelectedStudent(student)}
+            className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+          >
+            View Results
+          </button>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
           </div>
         )}
 
