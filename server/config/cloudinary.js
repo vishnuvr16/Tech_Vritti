@@ -18,7 +18,8 @@ const storage = new CloudinaryStorage({
     params: {
         folder: "resumes",
         format: async (req, file) => "pdf",
-        public_id: (req, file) => file.fieldname + "_" + Date.now()
+        public_id: (req, file) => file.fieldname + "_" + Date.now(),
+        resource_type: "raw"
     }
 });
 
