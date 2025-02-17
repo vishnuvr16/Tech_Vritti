@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-bold text-cyan-100 hover:text-white transition-all duration-300 flex items-center">
               <span className="mr-2 animate-pulse">✦</span>
-              Tech Vritti
+              PROYUJ
             </Link>
           </div>
 
