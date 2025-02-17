@@ -235,6 +235,7 @@ const Registration = () => {
                           }`}
                         >
                           <option value="">Select Qualification</option>
+                          <option value="Diploma">Diploma</option>
                           <option value="Bachelor's">Bachelor's</option>
                           <option value="Master's">Master's</option>
                           <option value="PhD">PhD</option>
